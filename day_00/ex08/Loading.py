@@ -1,11 +1,6 @@
-import sys
-from tqdm import tqdm
-sys.tracebacklimit = 0
-
-
-def main():
-    print(tqdm.__doc__)
-
-
-if __name__ == "__main__":
-    main()
+def ft_tqdm(lst: range) -> None:
+    count = 0
+    for i in lst:
+        print("=", end="")
+        yield count
+        count += 1
