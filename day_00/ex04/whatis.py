@@ -6,7 +6,7 @@ if len(sys.argv) != 2:
 
 try:
     int(sys.argv[1])
-except ValueError as e:
+except ValueError:
     raise AssertionError("argument is not an integer") from None
 
 if int(sys.argv[1]) % 2:

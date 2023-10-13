@@ -1,7 +1,10 @@
 import sys
 sys.tracebacklimit = 0
 
+
 def count_characters(s: str) -> dict:
+    '''Takes a string and returns a dict that contains
+    all types of characters possible'''
     punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
     res = {
         "upper_letters": [str.isupper, 0],
@@ -15,7 +18,7 @@ def count_characters(s: str) -> dict:
             if x[0](letter):
                 x[1] += 1
     return res
-        
+
 
 def main():
     if len(sys.argv) != 2:
@@ -26,7 +29,7 @@ def main():
     print(f"{res['lower_letters'][1]} lower letters")
     print(f"{res['punctuations'][1]} punctuation marks")
     print(f"{res['spaces'][1]} spaces")
-    print(f"{res['digits'][1]} digits")
+
 
 if __name__ == "__main__":
     main()
