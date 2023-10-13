@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+readme = "README.md"
+authors = [
+    {name = "Victor Vermot", email = "victorvermot@gmail.com"},
+]
+description = "A sample test package"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+classifiers = []
+dependencies = []
+
+[project.urls]
+Homepage = "https://example.com"
