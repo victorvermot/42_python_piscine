@@ -1,11 +1,17 @@
-import numpy
-
-def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+def give_bmi(height: list[int | float],
+             weight: list[int | float]) -> list[int | float]:
     res = []
     if len(height) != len(weight):
-        raise AssertionError("Lists should be the same size")
+        raise AssertionError(
+            "Arguments provided should be of type list and have the same size"
+        )
     for idx, elem in enumerate(height):
-        res.append((weight[idx] / (height[idx] / 100)**2) / 10000)
+        try:
+            res.append((weight[idx] / (height[idx])**2))
+        except TypeError:
+            raise AssertionError(
+                "Values provided should be of type int | float"
+            ) from None
     return res
 
 
